@@ -7,6 +7,8 @@ const destValue = document.querySelector("#destValue");
 var sourceCurrency;
 var destCurrency;
 
+sourceValue.value = 1;
+
 
 //Exract array of currency symbols
 const symbolArray = new Array();
@@ -224,7 +226,7 @@ convertButton.addEventListener("click", async() => {
 })
 
 
-//Axios functino for calling API
+//Axios function for calling API
 const responseFunction = async(currId, destId) => {
     try {
         const response = await axios.get(`${baseUrl}${APIKey}/pair/${currId}/${destId}`)
